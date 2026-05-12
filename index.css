@@ -1,0 +1,707 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.totalcotainer{
+    width: 100%;
+    height: 1200px;
+    background-color:#000000;
+}
+
+html { scroll-behavior: smooth; }
+
+/* ==============================
+   NAVBAR
+   ============================== */
+
+.menubar {
+    width: 100%;
+    height: 64px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.menubar-inner {
+    position: relative;
+    max-width: 1400px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.menubar-left ul {
+    list-style: none;
+    display: flex;
+    gap: 36px;
+}
+
+.menubar-left ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Geist", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+
+.menubar-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menubar-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+/* ==============================
+   HERO SECTION
+   ============================== */
+
+.hero {
+    width: 100%;
+    height: 88vh;
+    min-height: 600px;
+    background:
+        url('../Image/Banner\ 1.png') center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 60%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 80px 80px;
+}
+
+.hero-tag {
+    font-family: "Geist", sans-serif;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: white;
+    margin-bottom: 14px;
+}
+
+.hero-content h1 {
+    font-family: "Geist", sans-serif;
+    font-size: 72px;
+    font-weight: 300;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.btn-hero {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 14px 32px;
+    font-family: "Geist", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* ==============================
+   Bestsellers
+   ============================== */
+
+.section-label {
+    font-family: "Geist", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #A4A4A4;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-family: "Geist", sans-serif;
+    font-size: 42px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.25;
+    margin-bottom: 50px;
+    color: black;
+}
+
+.product-info {
+    padding-top: 14px;
+}
+
+.product-name {
+    font-family: "Geist", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    letter-spacing: 0.5px;
+}
+
+.product-price {
+    font-family: "Geist", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #A4A4A4;
+    margin-top: 4px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    margin-right: 6px;
+    color: #A4A4A4;
+}
+
+.product-img {
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+/* ==============================
+   POPULAR PRODUCTS
+   ============================== */
+
+.popular {
+    padding: 80px 350px 100px;
+    max-width: 100%;
+    margin: auto;
+    justify-content: center;
+    
+}
+
+.popular-grid {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.product-card.big {
+    flex: 0 0 420px;
+}
+
+.big-img {
+    width: 100%;
+    height: 520px;
+}
+
+.popular-right {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    flex: 1;
+}
+
+.product-card.small {
+    width: 100%;
+}
+
+.small-img {
+    width: 100%;
+    height: 240px;
+}
+
+
+/* ==============================
+   COLLECTIONS SPLIT
+   ============================== */
+
+.collections {
+    width: 100%;
+    display: flex;
+    height: 70vh;
+    min-height: 480px;
+}
+
+.collection-card {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.collection-card.mens {
+    background:
+        url('../Image/Collection\ 1.png') center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.collection-card.womens {
+    background:
+        url('../Image/Collection\ 2.png') center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.collection-overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.collection-text {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    z-index: 2;
+}
+
+.collection-text h3 {
+    font-family: "Geist", sans-serif;
+    font-size: 52px;
+    font-weight: 300;
+    color: white;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.btn-collection {
+   background-color: white;
+    color: black;
+    border: none;
+    padding: 14px 32px;
+    font-family: "Geist", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+/* ==============================
+  New arrivals
+   ============================== */
+
+.musthaves {
+    padding: 90px 80px 80px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.products-row {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.products-row .product-card {
+    flex: 1;
+}
+
+.med-img {
+    width: 100%;
+    height: 380px;
+}
+
+/* ==============================
+   PROMO BANNER
+   ============================== */
+
+.promo-banner {
+    width: 100%;
+    height: 1000px;
+    min-height: 400px;
+   background:
+        url('../Image/Promo.png') center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.promo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%);
+}
+
+.promo-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 80px 70px;
+}
+
+.promo-content p {
+    font-family: "Geist", sans-serif;
+    font-size: 38px;
+    font-weight: 300;
+    color: white;
+    line-height: 1.35;
+    margin-bottom: 28px;
+    max-width: 560px;
+}
+
+.btn-promo {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 14px 32px;
+    font-family: "Geist", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+/* ==============================
+   DISCOUNTED PICKS
+   ============================== */
+
+.discounts {
+    padding: 90px 80px 80px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+/* ==============================
+   TESTIMONIAL
+   ============================== */
+
+.testimonial {
+    width: 100%;
+    height: 1000px;
+    min-height: 380px;
+   background:
+        url('../Image/Discount.png') center/cover no-repeat;
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.testimonial-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 60%);
+}
+
+.testimonial-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 80px 70px;
+    max-width: 700px;
+}
+
+.quote {
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.quote-author {
+    font-family: "Geist", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.quote-role {
+    font-family: "Geist", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 1px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    
+}
+
+
+
+.hero-dots {
+    position: absolute;
+    bottom: 40px;
+    right: 80px;
+    z-index: 2;
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.35);
+}
+
+.dot.active {
+    background-color: white;
+}
+
+/* ==============================
+   SOCIAL SECTION
+   ============================== */
+
+.social {
+    padding: 90px 80px 80px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.handle {
+    color: #A4A4A4;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 6px;
+}
+
+.social-img {
+    width: 100px;
+    height: 180px;
+    border-radius: 4px;
+}
+
+/* ================================
+   FEATURES BAR
+   ================================ */
+
+.features-bar {
+    width: 100%;
+    background-color: #1A1A1A;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-top: 0;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 43px 71px;
+    background-color: #1A1A1A;
+    flex: 1;
+    max-width: 278px;
+    height: 130px;
+}
+
+/* Separate the 4 blocks with a tiny gap */
+.feature-item + .feature-item {
+    margin-left: 1px;
+}
+
+.feature-item svg {
+    flex-shrink: 0;
+}
+
+.feature-item span {
+    font-family: "Geist", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #A4A4A4;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+.footer {
+    background-color: #1A1A1A;
+    color: #ffffff;
+    padding: 80px 80px 40px;
+}
+
+.footer-inner {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    gap: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #A4A4A4;
+}
+
+.footer-brand {
+    flex: 0 0 240px;
+}
+
+.footer-logo {
+    font-family: "Geist", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 5px;
+    margin-bottom: 16px;
+}
+
+.footer-tagline {
+    font-family: "Geist", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #A4A4A4;
+    margin-bottom: 24px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 14px;
+}
+
+.footer-socials a {
+    text-decoration: none;
+    color: #A4A4A4;
+
+}
+
+
+.footer-col {
+    flex: 1;
+}
+
+.footer-col h4 {
+    font-family: "Geist", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color:#A4A4A4;
+    font-family: "Geist", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.footer-newsletter {
+    flex: 0 0 260px;
+}
+
+.footer-newsletter h4 {
+    font-family: "Geist", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 14px;
+}
+
+.footer-newsletter p {
+    font-size: 12px;
+    font-weight: 300;
+    color: #A4A4A4;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.newsletter-form {
+    display: flex;
+    height: 44px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    background: #1a1a1a;
+    border: 1px solid #A4A4A4;
+    border-right: none;
+    color: white;
+    font-family: "Geist", sans-serif;
+    font-size: 12px;
+    padding: 0 16px;
+    outline: none;
+    border-radius: 2px 0 0 2px;
+}
+
+.newsletter-form input::placeholder {
+    color: #A4A4A4;
+}
+
+.newsletter-form button {
+    width: 78px;
+    background: white;
+    color: black;
+    border: none;
+    font-size: 18px;
+    border-radius: 0 2px 2px 0;
+}
+
+
+.footer-bottom {
+    max-width: 1400px;
+    margin: auto;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p {
+    font-family: "Geist", sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    color: #A4A4A4;
+}
+
+.button {
+    font-family: "Geist", sans-serif;
+    font-size: 8px;
+    font-weight: 300;
+    color: #A4A4A4;
+}
